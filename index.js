@@ -5,7 +5,6 @@ const readline = require("readline").createInterface({
 const fs = require("fs")
 const ytdl = require("ytdl-core")
 const notifier = require("node-notifier")
-const { getInfo } = require("ytdl-core")
 
 readline.question("[+] URL: ", function(url) {
     try {
