@@ -8,7 +8,6 @@ const notifier = require("node-notifier")
 const date = new Date()
 
 readline.question("[+] URL: ", function(url) {
-    const infourl = ytdl.getInfo(url)
     ytdl(url, {filter: 'videoandaudio'}).pipe(fs.createWriteStream(`${date.getTime()}.mp4`))
     notifier.notify({
         title: "Youtube Downloader",
